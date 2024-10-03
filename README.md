@@ -1,13 +1,14 @@
-# spotify-node-applescript
-Control Spotify on Mac OSX with NodeJS and AppleScript.
+# spotify-node-dbus
+Control Spotify on Mac OSX and Linux with NodeJS, AppleScript (Mac OSX) and DBus (Linux)
+Fork of https://github.com/andrehaveman/spotify-node-applescript
 
 ## Installation
 
 ```
-$ npm install spotify-node-applescript
+$ npm install spotify-node-dbus
 ```
 
-## Running unit tests
+## Running unit tests (Does not work properly on linux)
 
 ```
 $ npm test
@@ -20,7 +21,7 @@ $ npm test
 Play a track with Spotify URI `uri`.
 
 ```javascript
-var spotify = require('spotify-node-applescript');
+var spotify = require('spotify-node-dbus');
 
 spotify.playTrack('spotify:track:3AhXZa8sUQht0UEdBJgpGc', function(){
     // track is playing
@@ -29,10 +30,11 @@ spotify.playTrack('spotify:track:3AhXZa8sUQht0UEdBJgpGc', function(){
 
 ### playTrackInContext(uri, contextUri, callback)
 
-Play a track in context of for example an album.
+Play a track in context of for example an album. 
+(On linux, it behaves the same as playTrack)
 
 ```javascript
-var spotify = require('spotify-node-applescript');
+var spotify = require('spotify-node-dbus');
 
 spotify.playTrackInContext('spotify:track:0R8P9KfGJCDULmlEoBagcO', 'spotify:album:6ZG5lRT77aJ3btmArcykra', function(){
     // Track is playing in context of an album
@@ -44,7 +46,7 @@ spotify.playTrackInContext('spotify:track:0R8P9KfGJCDULmlEoBagcO', 'spotify:albu
 Get the current track. `callback` is called with the current track as second argument.
 
 ```javascript
-var spotify = require('spotify-node-applescript');
+var spotify = require('spotify-node-dbus');
 
 spotify.getTrack(function(err, track){
 
@@ -74,7 +76,7 @@ spotify.getTrack(function(err, track){
 Get player state.
 
 ```javascript
-var spotify = require('spotify-node-applescript');
+var spotify = require('spotify-node-dbus');
 
 spotify.getState(function(err, state){
     /*
@@ -92,7 +94,7 @@ spotify.getState(function(err, state){
 Jump to a specific second of the current song.
 
 ```javascript
-var spotify = require('spotify-node-applescript');
+var spotify = require('spotify-node-dbus');
 
 spotify.jumpTo(15, function() {
     console.log('Jumped 15th second of the song');
@@ -132,7 +134,7 @@ Turn volume down.
 Sets the volume.
 
 ```javascript
-var spotify = require('spotify-node-applescript');
+var spotify = require('spotify-node-dbus');
 
 spotify.setVolume(42, function() {
     spotify.getState(function(err, state) {
@@ -154,7 +156,7 @@ Returns audio to original volume.
 Check if Spotify is running.
 
 ```javascript
-var spotify = require('spotify-node-applescript');
+var spotify = require('spotify-node-dbus');
 
 spotify.isRunning(function(err, isRunning){
     console.log(isRunning); // true
@@ -164,7 +166,7 @@ spotify.isRunning(function(err, isRunning){
 ### isRepeating(callback)
 Is repeating on or off?
 ```js
-var spotify = require('spotify-node-applescript');
+var spotify = require('spotify-node-dbus');
 
 spotify.isRepeating(function(err, shuffling){
     console.log(shuffling); // true || false
@@ -174,7 +176,7 @@ spotify.isRepeating(function(err, shuffling){
 ### isShuffling(callback)
 Is shuffling on or off?
 ```js
-var spotify = require('spotify-node-applescript');
+var spotify = require('spotify-node-dbus');
 
 spotify.isShuffling(function(err, shuffling){
     console.log(shuffling); // true || false
@@ -192,7 +194,7 @@ Toggles repeating
 ### toggleShuffling(callback)
 Toggles shuffling
 
-## Contributors
+## Contributors (Original)
 
 * [Robin Mehner](https://github.com/rmehner)
 * [Thorsten Ball](https://github.com/mrnugget)

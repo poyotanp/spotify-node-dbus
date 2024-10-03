@@ -1,3 +1,9 @@
+# 1.1.3 (2024-10-03)
+
+- Supports Linux (dbus)
+
+No API changes (maybe)
+
 # 1.1.2 (2024-02-22)
 
 - Removed undocumented 'open' method, because it was vulnerable to arbitrary command injection
