@@ -1,6 +1,6 @@
 {
   "name": "spotify-node-dbus",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "Control Spotify on Mac OSX and Linux with NodeJS, AppleScript (Mac OSX) and DBus (Linux)",
   "types": "lib/spotify-node-dbus.d.ts",
   "keywords": [
