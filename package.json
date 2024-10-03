@@ -17,9 +17,10 @@
   "engines": {
     "node": ">=0.6.0"
   },
-  "main": "./lib/spotify-node-applescript.js",
+  "main": "lib/spotify-node-dbus.js",
   "dependencies": {
-    "applescript": "1.0.0"
+    "applescript": "1.0.0",
+    "dbus-native": "^0.4.0"
   },
   "devDependencies": {
     "chai": "2.3.x",
@@ -27,6 +28,5 @@
   },
   "scripts": {
     "test": "mocha"
-  },
-  "optionalDependencies": {}
+  }
 }

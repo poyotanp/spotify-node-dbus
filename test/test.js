@@ -1,4 +1,4 @@
-var spotify = require('../lib/spotify-node-applescript.js');
+var spotify = require('../lib/spotify-node-dbus.js');
 var expect = require('chai').expect;
 
 describe('Spotify Controller', function(){
