@@ -1,8 +1,7 @@
-# 1.1.3 (2024-10-03)
-
+# 1.1.3 ~ 1.1.5 (2024-10-03)
 - Supports Linux (dbus)
-
-No API changes (maybe)
+- Promises
+- Fix DBus Server Crash
 
 # 1.1.2 (2024-02-22)
 
