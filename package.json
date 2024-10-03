@@ -13,7 +13,7 @@
   "author": "PoyotanP <poyotanp@poyo.moe> (Forked from André Haveman <andre.haveman@gmail.com>)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/andrehaveman/spotify-node-applescript.git"
+    "url": "git://github.com/poyotanp/spotify-node-dbus.git"
   },
   "engines": {
     "node": ">=0.6.0"
